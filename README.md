@@ -31,7 +31,8 @@ $(document).ready(function(){
 
 ## Methods
 
-`GetSelectedValue`: returns an Array of the group allows multiple selection, String otherwise
+`GetSelectedValue`: returns an Array of the group allows multiple selection, String otherwise  
+  
 `SetActive`: set active option by value dinamically after initialization. If the group allows multiple selection the method requires an Array, String otherwise
 
 ```
