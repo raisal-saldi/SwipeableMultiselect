@@ -1,0 +1,50 @@
+<html>
+    <head>
+
+        <style>
+        
+        .btn-group {
+            margin: 50px;
+        }
+        
+        </style>
+        <link rel="stylesheet" href="SwipeableMultiselect.css" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="SwipeableMultiselect.js"></script>
+
+        <script>
+        
+        $(document).ready(function(){
+            $("#swipeable-basic").swipeableMultiselect({
+                values: [{ "text": "Apple", "value": "apple"}, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }]
+            });
+            $("#swipeable-radio").swipeableMultiselect({
+                values: [{ "text": "Apple", "value": "apple"}, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }],
+                allowMultiple: false
+            });
+            $("#swipeable-active").swipeableMultiselect({
+                values: [{ "text": "Apple", "value": "apple", "active": true }, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }]
+            });
+        });
+        
+        </script>
+
+    </head>
+
+    <body>
+        Basic: <div id="swipeable-basic"></div>
+        <br />
+        Radio: <div id="swipeable-radio"></div>
+        <br />
+        Control initialized with active option: <div id="swipeable-active"></div>
+    </body>
+</html>
