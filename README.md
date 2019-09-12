@@ -28,6 +28,19 @@ $(document).ready(function(){
     }); //initialization with custom active option (you can set the flag active:true and the current option will be the active option after initialization)
 });
 ```
+##Option
+`active` : set selection to selected
+```
+$("#swipeable-basic").swipeableMultiselect({
+    values: [{ "text": "Apple", "value": "apple","active":true}, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }]
+});
+```
+`disable` : set `disabled` attribute to selection
+```
+$("#swipeable-basic").swipeableMultiselect({
+    values: [{ "text": "Apple", "value": "apple","disable":true}, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }]
+});
+```
 
 ## Methods
 
