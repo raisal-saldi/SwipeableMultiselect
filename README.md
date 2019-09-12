@@ -41,6 +41,12 @@ $("#swipeable-basic").swipeableMultiselect({
     values: [{ "text": "Apple", "value": "apple","disable":true}, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }]
 });
 ```
+`name` : set `name` attribute to selection
+```
+$("#swipeable-basic").swipeableMultiselect({
+    values: [{ "text": "Apple", "value": "apple","name":"check"}, { "text": "Pear", "value": "pear" }, { "text": "Banana", "value": "banana" }]
+});
+```
 
 ## Methods
 
