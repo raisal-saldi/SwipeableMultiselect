@@ -47,16 +47,20 @@
                 else inputType = "checkbox";
                 if (opt.active != null && opt.active == true) isActive = "active";
                 else isActive = "";
+                if (opt.disable != null && opt.disable == true) isDisable = "disabled";
+                else isDisable = "";
+                if (opt.names != "") isName = opt.names+"[]";
+                else isName = "check[]";
                 
                 if (index == 0) custom_border_class = "first-option";
                 else if (index == values.length - 1) custom_border_class = "last-option";
                 else custom_border_class = "";
 
                 if (opt.image == null) {
-                    optsHtmlString += "<label class=\"multiselect-option " + isActive + " btn btn-sm btn-primary " + custom_border_class + "\"><input value=\"" + opt.value + "\" type=\"" + inputType + "\" autocomplete=\"off\">" + opt.text + "</label>";
+                    optsHtmlString += "<label class=\"multiselect-option " + isActive + " btn btn-sm btn-primary  "+isDisable+" " + custom_border_class + "\"><input value=\"" + opt.value + "\" type=\"" + inputType + "\" autocomplete=\"off\" "+isDisable+" name=\""+isName+"\">" + opt.text + "</label>";
                 }
                 else {
-                    optsHtmlString += "<label class=\"multiselect-option " + isActive + " btn btn-sm btn-primary " + custom_border_class + "\"><input value=\"" + opt.value + "\" type=\"" + inputType + "\" autocomplete=\"off\"><img value=\"" + opt.value + "\" src=\"" + opt.image + "\" width=\"50px;\" height=\"50px;\" /></label>";
+                    optsHtmlString += "<label class=\"multiselect-option " + isActive + " btn btn-sm btn-primary " + custom_border_class + "\"><input value=\"" + opt.value + "\" type=\"" + inputType + "\" autocomplete=\"off\" "+isDisable+" name=\""+isName+"\"><img value=\"" + opt.value + "\" src=\"" + opt.image + "\" width=\"50px;\" height=\"50px;\" /></label>";
                 }
                 index++;
             }
